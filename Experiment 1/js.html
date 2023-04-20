@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+function myFunction1() {
+
+    a=document.getElementById("h1")
+    a.style.color="blue";
+
+  }
+function myfunction2() {
+    b=document.getElementById("p1")
+    b.innerHTML="Anil Neerukonda institute of technology and sciences"
+    b.style.color="green"
+}
+function myfunction4() {
+   document.getElementById("i1").style.border="10px solid blue"
+}
+function myfunction3() {
+    a=document.getElementById("i1")
+    a.src="WhatsApp Image 2023-03-14 at 14.22.20.jpg"
+}
+  function myfunction5() {
+          document.getElementById("d1").style.color="red"
+  }
+
+</script>
+</head>
+<body>
+  <link rel="stylesheet" href="f.css">
+<h1 id="h1" onclick="myFunction1()">Welcome To Anits</h1>
+<h2 id ="p1" onclick="myfunction2()">About ANITS</h2>
+<img  width=150 height=150 id="i1" src="unnamed.jpg" alt="anits"><br></br>
+<button type="button" onclick="myfunction4()">click here image </button><br></br>
+<button type="button" onclick="myfunction3()">click here to change image</button><br></br>
+<div id="d1" onmouseover="myfunction5()">
+  Welcome to Anits
+</div>
+
+</body>
+</html>

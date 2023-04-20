@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fruit Bill Generation</title>
+    <link rel="stylesheet" href="b1.css">
+  </head>
+  <body>
+    <h1 class="sty">Fruits Bill Generation</h1>
+    <form>
+      <h2 class="s">Menu</h2>
+      <div class="fruit">
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>100/- per dozen</td>
+          <td><input type="number" id="apple-quantity" name="apple-quantity"></td>
+        </tr>
+        <tr>
+          <td>Banana</td>
+          <td>60/- per dozen</td>
+          <td><input type="number" id="banana-quantity" name="banana-quantity"></td>
+        </tr>
+        <tr>
+          <td>Oranges</td>
+          <td>80/- per dozen</td>
+          <td><input type="number" id="oranges-quantity" name="oranges-quantity"></td>
+        </tr>
+        <tr>
+          <td>Guava</td>
+          <td>50/- per dozen</td>
+          <td><input type="number" id="g-quantity" name="g-quantity"></td>
+        </tr>
+        <tr>
+          <td>Pomegranate</td>
+          <td>150/- per dozen</td>
+          <td><input type="number" id="pome-quantity" name="pome-quantity"></td>
+        </tr>
+        <tr>
+          <td>Grapes</td>
+          <td>45/- per kg</td>
+          <td><input type="number" id="grape-quantity" name="grape-quantity"></td>
+        </tr>
+      </table>
+      </div>
+      <button type="button" onclick="generateBill()">Generate Bill</button>
+    </form>
+    <div id="bill">
+      <script type="text/javascript">
+        function generateBill() {
+          const aq = parseInt(document.getElementById("apple-quantity").value) || 0;
+          const bq = parseInt(document.getElementById("banana-quantity").value) || 0;
+          const oq = parseInt(document.getElementById("oranges-quantity").value) || 0;
+          const gq = parseInt(document.getElementById("g-quantity").value) || 0;
+          const pq = parseInt(document.getElementById("pome-quantity").value) || 0;
+          const grq = parseInt(document.getElementById("grape-quantity").value) || 0;
+          const a = 100;
+          const b = 60;
+          const o = 80;
+          const g = 50;
+          const p = 150;
+          const gr = 45;
+          const subtotal = a*aq+ b*bq + o*oq+g*gq+p*pq+gr*grq;
+          const taxRate = 0.18;
+          const tax = subtotal * taxRate;
+          const total = subtotal + tax;
+          const billDiv = document.getElementById("bill");
+          billDiv.innerHTML = "<h2>Bill</h2>" +
+                              "<p>Apple: " + (a*aq).toFixed(2) + "/-</p>" +
+                              "<p>Banana: " + (b*bq).toFixed(2) + "/-</p>" +
+                              "<p>Oranges: " + (o* oq).toFixed(2) + "/-</p>" +
+                              "<p>Guava: " + (g *gq).toFixed(2) + "/-</p>" +
+                              "<p>Pomegranate: " + (p*pq).toFixed(2) + "/-</p>" +
+                              "<p>Grapes: " + (gr*grq).toFixed(2) + "/-</p>" +
+                              "<p>Subtotal: " + subtotal.toFixed(2) + "/-</p>" +
+                              "<p>Tax: " + tax.toFixed(2) + "/-</p>" +
+                              "<p>Total: " + total.toFixed(2) + "/-</p>";
+        }
+
+
+      </script>
+    </div>
+  </body>
+</html>

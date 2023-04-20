@@ -1,0 +1,50 @@
+<html>
+    <body align="center" >
+        <head>
+            <title>Registration Form</title>
+            <link rel="stylesheet" href="sty.css">
+        </head>
+    </body>
+    <form action="re.php" method="post">
+    <h1 align="center" >Registration Form</h1>
+                <label for="username :">Username :</label> 
+                <input type="text" placeholder="Enter username" name="un" value="" >
+            <br><br>
+                <label for="email">Email :</label> 
+                <input type="text" placeholder="Enter email" name="e" value="" >
+            <br><br>
+                <label for="gen">Gender :</label>
+                <input type="radio" name="r" value="male" >
+                <label for="male">Male</label>
+                <input type="radio" name="r" value="female" >
+                <label for="female">Female</label>
+            <br><br>
+                <label for="rel">Religion :</label>
+                 <select name="rel" value="">
+                    <option value="1">Hindu</option>
+                    <option value="2">Christian</option>
+                    <option value="3">Muslim</option>
+                 </select>   
+            <br><br>
+                <label for="db">Date of Birth :</label>
+                <input type="date" name="dob" value="">
+                <br><br>
+                <label for="l">Languages: </label>
+                <input type="Checkbox">
+                <label for="1">English</label>
+                <input type="checkbox">
+                <label for="2">Hindi</label>
+                <input type="checkbox">
+                <label for="3">Telugu</label>
+            <br><br>
+                <label for="add">Address</label>
+                <textarea name="" id="" cols="15" rows="5" placeholder="Enter the address" name="add" value="" ></textarea>
+            <br><br>
+                <label for="pas">Password :</label>
+                <input type="text" placeholder="enter password" name="pas" value="">
+            <br><br>
+                <button>Submit</button>
+                <button>Reset</button>
+            <br><br>
+    </form>    
+</html>
